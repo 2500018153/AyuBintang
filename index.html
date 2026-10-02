@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndieSound - Indonesian Local Indie Musician Catalog & Voting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+            <h1 class="logo">🎸 IndieSound</h1>
+            <nav class="nav">
+                <a href="#catalog">Musician Catalog</a>
+                <a href="#voting">Voting</a>
+                <a href="#results">Current Results</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Support Indonesian Local Indie Musicians</h2>
+            <p>Discover, listen, and cast your vote for your favorite indie musician.</p>
+        </div>
+    </section>
+
+    <!-- MUSICIAN CATALOG (rendered by script.js) -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Indie Musician Catalog</h2>
+            <div class="musician-grid" id="musician-grid"></div>
+        </div>
+    </section>
+
+    <!-- VOTING FORM -->
+    <section class="voting" id="voting">
+        <div class="container">
+            <h2 class="section-title">Favorite Musician Voting Form</h2>
+
+            <div id="status-message"></div>
+
+            <form id="voting-form" novalidate>
+
+                <div class="form-group">
+                    <label for="name">Voter Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <span class="error-msg" id="error-name"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="example@email.com">
+                    <span class="error-msg" id="error-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="musician">Musician Choice</label>
+                    <select id="musician" name="musician">
+                        <option value="">-- Select a Musician --</option>
+                    </select>
+                    <span class="error-msg" id="error-musician"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason for Your Choice</label>
+                    <textarea id="reason" name="reason" rows="4" placeholder="Tell us why you chose this musician (minimum 15 characters)"></textarea>
+                    <span class="error-msg" id="error-reason"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Vote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CURRENT VOTING RESULTS -->
+    <section class="results" id="results">
+        <div class="container">
+            <h2 class="section-title">Current Voting Results</h2>
+            <ul class="results-list" id="results-list"></ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> IndieSound - Web Programming Practicum</p>
+            <p>Visitor Count: <strong id="counter">0</strong> times</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
